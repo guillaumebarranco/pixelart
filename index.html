@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Pixel Art Matrix</title>
+		<link rel="stylesheet" href="stylesheets/index.css" />
+	</head>
+
+	<body>
+		<ul class="icons">
+			<li class="icons--field"></li>
+			<!-- <li class="icons--mushroom"></li> -->
+			<li class="icons--link"></li>
+			<li class="icons--triforce"></li>
+			<li class="icons--zelda"></li>
+		</ul>
+
+		<!--
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<script>
+
+			$(document).ready(function() {
+
+				var new_color;
+				var old_color;
+
+				var koko = 0;
+
+				var UID = {
+					_current: 0,
+					getNew: function(){
+						this._current++;
+						return this._current;
+					}
+				};
+
+				HTMLElement.prototype.pseudoStyle = function(element,prop,value){
+					var _this = this;
+					var _sheetId = "pseudoStyles";
+					var _head = document.head || document.getElementsByTagName('head')[0];
+					var _sheet = document.getElementById(_sheetId) || document.createElement('style');
+					_sheet.id = _sheetId;
+					var className = "pseudoStyle" + UID.getNew();
+					
+					_this.className +=  " "+className; 
+					
+					_sheet.innerHTML += " ."+className+":"+element+"{"+prop+":"+value+"}";
+					_head.appendChild(_sheet);
+					return this;
+				};
+
+				var i = 0;
+
+				setInterval(function() {
+
+					//switchBorderRadiusLi();					
+
+
+				}, 1000);
+
+				function switchBorderRadiusLi() {
+
+					$('li').each(function() {
+						var li = document.querySelectorAll('li')[i];
+
+						if(koko === 0) {
+							li.pseudoStyle("after","border-radius",'100%');
+						} else if(koko === 1) {
+							li.pseudoStyle("after","border-radius",'0%');
+						}
+
+						i++;
+					});
+					if(koko === 0) {
+						koko = 1;
+					} else if(koko === 1) {
+						koko = 0;
+					}
+
+					i = 0;
+				}
+
+				
+
+				/*setInterval(function() {
+
+					var box = window.getComputedStyle(
+						document.querySelector('.icons--diamond'), ':after'
+					).getPropertyValue('box-shadow');
+
+					//console.log(box);
+
+					if(koko === 0) {
+						old_color = / 180/gi;
+						new_color = '23';
+						var new_box = box.replace(old_color, new_color);
+						koko = 1;
+						document.getElementById('koko').pseudoStyle("after","box-shadow",new_box);
+					} else if(koko === 1) {
+						old_color = /23/gi;
+						new_color = '180';
+						var new_box = box.replace(old_color, new_color);
+						koko = 0;
+						document.getElementById('koko').pseudoStyle("after","box-shadow",new_box);
+					}
+					
+
+					//console.log(new_box);
+
+					//window.setComputedStyle(
+					
+					//).style('box-shadow');
+
+				}, 1000);
+*/
+				
+			});
+
+		</script>-->
+
+	</body>
+
+</html>

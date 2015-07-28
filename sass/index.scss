@@ -1,0 +1,243 @@
+$icon-size-var : 5px;
+
+@function pixelize($matrix, $size: $icon-size-var, $color: hotpink) {
+
+  $l: length($matrix); // Taille de la Matrice
+  $shadows: ''; // Liste des ombres
+  $i: $l; // Taille d'une ligne de la Matrice
+// Lecture de tous les éléments de la liste
+  @for $i from 1 through $l {
+    $row: nth($matrix, $i); // Une ligne de la liste
+
+    @for $j from 1 through length($row){
+
+        $item: nth($row, $j); // Un élément de la ligne
+
+        $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ';
+
+        @if $item == x{
+          $shadows:  $shadows + hotpink;
+        }
+        @if $item == w{
+          $shadows:  $shadows + white;
+        }
+        @if $item == b {
+          $shadows:  $shadows + black;
+        }
+        @if $item == g {
+          $shadows:  $shadows + green;
+        }
+        @if $item == q {
+          $shadows:  $shadows + #e2c2cd;
+        }
+        @if $item == e {
+          $shadows:  $shadows + #d2cab5;
+        }
+        @if $item == y {
+          $shadows:  $shadows + yellow;
+        }
+        @if $item == o {
+          $shadows:  $shadows + orange;
+        }
+        @if $item == a {
+          $shadows:  $shadows + blue;
+        }
+        @if $item == p {
+          $shadows:  $shadows + hotpink;
+        }
+        @if $item == r {
+          $shadows:  $shadows + red;
+        }
+        @if $item == m {
+          $shadows:  $shadows + maroon;
+        }
+        @if $item == t {
+          $shadows:  $shadows + transparent;
+        }
+        @if $item == z {
+          $shadows:  $shadows + grey;
+        }
+
+      // En arrivant à la fin de la ligne, ajout d'une virgule pour séparer les ombres
+      @if not ($j == length($row) and $i == $l) {
+        $shadows: $shadows + ',';
+      }
+    }
+  }
+
+  // Renvoi de la box-shadow
+  @return unquote($shadows);
+}
+
+@import 'field.scss';
+
+// MUSHROOM
+$mushroom: 
+  (w w w w w b b b b b b w w w w w)
+  (w w w b b r r r r w w b b w w w)
+  (w w b w w r r r r w w w w b w w)
+  (w b w w r r r r r r w w w w b w)
+  (w b w r r w w w w r r w w w b w)
+  (b r r r w w w w w w r r r r r b)
+  (b r r r w w w w w w r r w w r b)
+  (b w r r w w w w w w r w w w w b)
+  (b w w r r w w w w r r w w w w b)
+  (b w w r r r r r r r r r w w r b)
+  (b w r r b b b b b b b b r r r b)
+  (w b b b w w b w w b w w b b b w)
+  (w w b w w w b w w b w w w b w w)
+  (w w b w w w w w w w w w w b w w)
+  (w w w b w w w w w w w w b w w w)
+  (w w w w b b b b b b b b w w w w)
+;
+
+// LINK
+$link:
+  (t t t t t t b g g g g b t t t t t t)
+  (t t t t t b g g g g g g b t t t t t)
+  (t t t t b g g g g g g g g b t t t t)
+  (t t t b g g g g g g g g g g b t t t)
+  (t t t b g g y y y y y y g g b t t t)
+  (t t b g b y y y y y y y y b g b t t)
+  (b q b b o y o y y y o b y y b b q b)
+  (b e e b y b y y y y b q b y b e e b)
+  (t b q b b o y y o b q e b o b q b t)
+  (t t b y b o o b b q e e q b y b t t)
+  (t t b y b b b b q e b b b b y b t t)
+  (t t b o b w a b e e b a w b o b t t)
+  (t t t b b e a w e e w a e b b t t t)
+  (t t t t b b e e e e e e b b t t t t)
+  (t t t b g b b q q q q b b g b t t t)
+  (t t b g g g g g g g g g g g g b t t)
+  (t b e e b b g g g g g g b b e e b t)
+  (t b q e g g b b y y b b g g e q b t)
+  (t t b b b g g g y y g g g b b b t t)
+  (t t t t b b g g g g g g b b t t t t)
+  (t t t b p b b b b b b b b p b t t t)
+  (t t t b p p b b t t b b p p b t t t)
+  (t t t t b b b t t t t b b b t t t t)
+;
+
+// ZELDA
+$zelda:
+  (t t t b t t t m m m m t t t b t t t)
+  (t t t z t m o y y y y o m t z t t t)
+  (t t b w m o y y y y y y o m w b t t)
+  (t t b w o y y y y y y y y o w b t t)
+  (t t b w y y y y y y y y y y w b t t)
+  (t t b w y y y y y y y y y y w b t t)
+  (b w b w y o y y o o y y o y z b z b)
+  (b z w b y m o o w r o o m y b z w b)
+  (t b z m y y m o r r o m y o m w b t)
+  (t t b m o y y y m m e e e e m b t t)
+  (t t t m e m a o o e e a m e m t t t)
+  (t t m o e e a e e e e a e e o m t t)
+  (t t o y m q p e e e e p q m y o t t)
+;
+
+$triforce:
+  (t t t t t t t t b t t t t t t t t)
+  (t t t t t t t b y b t t t t t t t)
+  (t t t t t t t b y b t t t t t t t)
+  (t t t t t t b y y y b t t t t t t)
+  (t t t t t t b y y y b t t t t t t)
+  (t t t t t b y y y y y b t t t t t)
+  (t t t t t b y y y y y b t t t t t)
+  (t t t t b y y y y y y y b t t t t)
+  (t t t t b b b b b b b b b t t t t)
+  (t t t b y b t t t t t b y b t t t)
+  (t t t b y b t t t t t b y b t t t)
+  (t t b y y y b t t t b y y y b t t)
+  (t t b y y y b t t t b y y y b t t)
+  (t b y y y y y b t b y y y y y b t)
+  (t b y y y y y b t b y y y y y b t)
+  (b y y y y y y y b y y y y y y y b)
+  (b b b b b b b b b b b b b b b b b)
+;
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+$foot : 540px;
+
+
+// list we're styling
+.icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  li {
+    //margin-top: 100px;
+    display: inline-block;
+    position: absolute;
+
+    &:after {
+      content: '';
+      -webkit-transition: 1s;
+      position: absolute;
+      top: -$icon-size-var;
+      left: -$icon-size-var;
+      width: $icon-size-var;
+      height: $icon-size-var;
+      //border-radius: 50%;
+    }
+  }
+  
+  &--field {
+    left: 0;
+    top: 0;
+    position: relative;
+    &:after {
+      box-shadow: pixelize($field, 20px);
+      top: -20px !important;
+      left: -20px !important;
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+
+  &--mushroom {
+    left: 100px;
+
+
+    /*
+    * Le 16 CI-DESSOUS est le nombre de ligne de la matrice
+    */
+
+
+    top: $foot - (16 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($mushroom);
+    }
+  }
+  &--link {
+    left: 500px;
+    top: $foot - (23 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($link);
+    }
+  }
+  &--zelda {
+    left: 700px;
+    top: $foot - (23 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($zelda);
+    }
+  }
+  &--triforce {
+    left: 200px;
+    top: $foot - (17 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($triforce);
+    }
+  }
+}
