@@ -21,6 +21,9 @@ $icon-size-var : 5px;
         @if $item == b {
           $shadows:  $shadows + black;
         }
+        @if $item == d {
+          $shadows:  $shadows + dodgerblue;
+        }
         @if $item == e {
           $shadows:  $shadows + #d2cab5; // beige
         }
@@ -187,6 +190,51 @@ $triforce:
   (b b b b b b b b b b b b b b b b b)
 ;
 
+$cloud :
+  (t t t t t t t w w w w w w t t t t t)
+  (t t t t t t w w z z z z w w t t t t)
+  (t t t w w w w z w w w w z w w t t t)
+  (t t w w z z z w w w w w w z w w t t)
+  (t w w z w w w w w w w w w w z w w t)
+  (w w z w w w w w w w w w w w w z w w)
+  (w z w w w w w w w w w w w w w w z w)
+  (w z w w w w w w w w w w w w w w z w)
+  (w z w w w w w w w w w w w w w w z w)
+  (w z w w w w w w w w w w w w w w z w)
+  (w w z z z z z z z z z z z z z z w w)
+  (t w w w w w w w w w w w w w w w w t)
+;
+
+$navi :
+  (t b b b t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (b w w w b t t t t t t t t t t t t t t t t t t t t t t t t)
+  (b w w w w b t t t t t t t t t t t t t t t t t t t t t t t)
+  (b w w w w b t t t t t t t t t t t t t t t t t t t b b b t)
+  (b w w w w w b t t t t t t t t t t t t t t t t b b w w w b)
+  (b w w w w w b t t t t t t t t t t t t t t b b w w w w w b)
+  (b w w w w w w b t t t t t t t t t t t t b w w w w w w w b)
+  (t b w w w w w b t t t t t t t t t t t b w w w w w w w b t)
+  (t b b w w w w b t t t t t t t t t t b w w w w w w w w b t)
+  (t t b w w w w w b t t t t t t t t b w w w w w w w w b t t)
+  (t t t b w w w w w b b b b b t t b w w w w w w w w w b t t)
+  (t t t b w w w w w a a a a a b b w w w w w w w w w b t t t)
+  (t t t t b w w w a a a a a a a b w w w w w w w w b t t t t)
+  (t t t t t b w a a d d d d d a a w w w w w w w b t t t t t)
+  (t t t t t b a a d d d d d d d a a w w w w w b t t t t t t)
+  (t t t t b a a d d d w w w d d d a a w w b b t t t t t t t)
+  (t t t t b a a d d w w w w w d d a a b b t t t t t t t t t)
+  (t t t t b a a d d w w w w w d d a a b t t t t t t t t t t)
+  (t t t t b a a d d w w w w w d d a a b t t t t t t t t t t)
+  (t t t t b a a d d d w w w d d d a a b t t t t t t t t t t)
+  (t t t t t b a a d d d d d d d d a w b t t t t t t t t t t)
+  (t t t t t b w a a d d d d d d a w w w b t t t t t t t t t)
+  (t t t t b w w w a a a a a a a w w w w w b t t t t t t t t)
+  (t t t t b w w w w a a a a a b b w w w w b t t t t t t t t)
+  (t t t t b w w w w b b b b b t t b w w b t t t t t t t t t)
+  (t t t t t b w w w b t t t t t t t b b t t t t t t t t t t)
+  (t t t t t t b b b t t t t t t t t t t t t t t t t t t t t)
+;
+
 
 
 body {
@@ -261,6 +309,35 @@ $foot : 540px;
     top: $foot - (27 * $icon-size-var);
     &:after {
       box-shadow: pixelize($ganon);
+    }
+  }
+
+  $width_cloud : 6px;
+
+  &--cloud {
+    left: 1100px;
+    top: 80px;
+    &:after {
+      box-shadow: pixelize($cloud, $width_cloud);
+      top: -$width_cloud !important;
+      left: -$width_cloud !important;
+      width: $width_cloud !important;
+      height: $width_cloud !important;
+    }
+  }
+
+
+  $width_navi : 1px;
+
+  &--navi {
+    left: 380px;
+    top: $foot - (24 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($navi, $width_navi);
+      top: -$width_navi !important;
+      left: -$width_navi !important;
+      width: $width_navi !important;
+      height: $width_navi !important;
     }
   }
 
