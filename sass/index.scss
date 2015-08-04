@@ -378,16 +378,16 @@ $foot : 540px;
   }
 
   &--thelegendof {
-    left: 200px;
-    top: 200px;
+    left: 100px;
+    top: 100px;
     &:after {
       box-shadow: pixelize($thelegendof);
     }
   }
 
   &--myzelda {
-    left: 600px;
-    top: 200px;
+    left: 90px;
+    top: 140px;
     &:after {
       box-shadow: pixelize($myzelda);
     }
@@ -398,6 +398,7 @@ $foot : 540px;
   &--cloud {
     left: 1100px;
     top: 80px;
+
     &:after {
       box-shadow: pixelize($cloud, $width_cloud);
       top: -$width_cloud !important;
