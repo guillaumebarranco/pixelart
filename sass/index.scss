@@ -15,48 +15,60 @@ $icon-size-var : 5px;
 
         $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ';
 
+        @if $item == a {
+          $shadows:  $shadows + blue; // a pour azur
+        }
+        @if $item == b {
+          $shadows:  $shadows + black;
+        }
+        @if $item == e {
+          $shadows:  $shadows + #d2cab5; // beige
+        }
+        @if $item == g {
+          $shadows:  $shadows + green;
+        }
         @if $item == x{
           $shadows:  $shadows + hotpink;
         }
         @if $item == w{
           $shadows:  $shadows + white;
         }
-        @if $item == b {
-          $shadows:  $shadows + black;
-        }
-        @if $item == g {
-          $shadows:  $shadows + green;
-        }
-        @if $item == q {
-          $shadows:  $shadows + #e2c2cd;
-        }
-        @if $item == e {
-          $shadows:  $shadows + #d2cab5;
-        }
-        @if $item == y {
-          $shadows:  $shadows + yellow;
-        }
-        @if $item == o {
-          $shadows:  $shadows + orange;
-        }
-        @if $item == a {
-          $shadows:  $shadows + blue;
-        }
-        @if $item == p {
-          $shadows:  $shadows + hotpink;
-        }
-        @if $item == r {
-          $shadows:  $shadows + red;
+        @if $item == k {
+          $shadows:  $shadows + #5F021F; // bordeaux
         }
         @if $item == m {
           $shadows:  $shadows + maroon;
         }
+        @if $item == o {
+          $shadows:  $shadows + orange;
+        }
+        @if $item == p {
+          $shadows:  $shadows + hotpink;
+        }
+        @if $item == q {
+          $shadows:  $shadows + #e2c2cd; // rose clair
+        }
+        @if $item == r {
+          $shadows:  $shadows + red;
+        }
         @if $item == t {
           $shadows:  $shadows + transparent;
+        }
+        @if $item == v {
+          $shadows:  $shadows + purple;
+        }
+        @if $item == y {
+          $shadows:  $shadows + yellow;
         }
         @if $item == z {
           $shadows:  $shadows + grey;
         }
+        
+        
+        @if $item == aq {
+          $shadows:  $shadows + aqua;
+        }
+        
 
       // En arrivant à la fin de la ligne, ajout d'une virgule pour séparer les ombres
       @if not ($j == length($row) and $i == $l) {
@@ -70,26 +82,6 @@ $icon-size-var : 5px;
 }
 
 @import 'field.scss';
-
-// MUSHROOM
-$mushroom: 
-  (w w w w w b b b b b b w w w w w)
-  (w w w b b r r r r w w b b w w w)
-  (w w b w w r r r r w w w w b w w)
-  (w b w w r r r r r r w w w w b w)
-  (w b w r r w w w w r r w w w b w)
-  (b r r r w w w w w w r r r r r b)
-  (b r r r w w w w w w r r w w r b)
-  (b w r r w w w w w w r w w w w b)
-  (b w w r r w w w w r r w w w w b)
-  (b w w r r r r r r r r r w w r b)
-  (b w r r b b b b b b b b r r r b)
-  (w b b b w w b w w b w w b b b w)
-  (w w b w w w b w w b w w w b w w)
-  (w w b w w w w w w w w w w b w w)
-  (w w w b w w w w w w w w b w w w)
-  (w w w w b b b b b b b b w w w w)
-;
 
 // LINK
 $link:
@@ -133,6 +125,46 @@ $zelda:
   (t t t m e m a o o e e a m e m t t t)
   (t t m o e e a e e e e a e e o m t t)
   (t t o y m q p e e e e p q m y o t t)
+  (t t o y p m e e e e e e m p y o t t)
+  (t t o m q p m m m m m m p q m o t t)
+  (t t m z z b v v v v v v b z z m t t)
+  (t t b w z b y v v v v y b z w b t t)
+  (t b w z b p m y y y y m p b z w b t)
+  (t t b b p q p b y y b p q p b b t t)
+  (t t t v q q q a a a a q q q v t t t)
+  (t t t v p q q a a a a q q p v t t t)
+  (t t t t v p q a a a a q p v t t t t)
+  (t t t t t t v v a a v v t t t t t t)
+;
+
+$ganon:
+  (t t t t t t b k r r k b t t t t t t)
+  (t t t t b r z z z z z z r b t t t t)
+  (t t b r z z k r k r r k z z r b t t)
+  (t b z z r r k r r r r r r r z z b t)
+  (b z k r b b b b b b b b b b r k z b)
+  (b r b b z z z z z z z z z z b b r z)
+  (k r z z z z z z v v z z z z z z r k)
+  (k r z z z z b b v v b b z z z z r k)
+  (b k r k b z z z z z z z z b k r k b)
+  (b b k r r r b z b z z b r r r k b b)
+  (b z b z z b z z z z z z b z z b z b)
+  (b z z w o b z z z z z z b o w z z b)
+  (t z z z y b y z b z z y b y z z z t)
+  (t b z z z o z z b z z z o z z z b t)
+  (t t b z z z z z b b z z z z z b t t)
+  (t t t z z z z z z z z z z z z t t t)
+  (t t b b b b b b b b b b b b b b t t)
+  (t b b b z z z z z z z z z z b b b t)
+  (b m b m b b b b b b b b b b m b m b)
+  (b b b m m m m m m m m m m m m b b b)
+  (z z w b m m m m m m m m m m b w z z)
+  (b z w b b b b b m m b b b b b w z z)
+  (b z z b b m m m m m m m m b b z z b)
+  (t b b t b z z z z z z z z b t b b t)
+  (t t t t b z w b b b b w z b t t t t)
+  (t t t t b m m b t t b m m b t t t t)
+  (t t t t t b b t t t t b b t t t t t)
 ;
 
 $triforce:
@@ -204,40 +236,46 @@ $foot : 540px;
       height: 20px !important;
     }
   }
-
-  &--mushroom {
-    left: 100px;
-
+  
+  &--link {
+    left: 400px;
 
     /*
-    * Le 16 CI-DESSOUS est le nombre de ligne de la matrice
+    * Le 23 CI-DESSOUS est le nombre de ligne de la matrice
     */
 
-
-    top: $foot - (16 * $icon-size-var);
-    &:after {
-      box-shadow: pixelize($mushroom);
-    }
-  }
-  &--link {
-    left: 500px;
     top: $foot - (23 * $icon-size-var);
     &:after {
       box-shadow: pixelize($link);
     }
   }
   &--zelda {
-    left: 700px;
+    left: 800px;
     top: $foot - (23 * $icon-size-var);
     &:after {
       box-shadow: pixelize($zelda);
     }
   }
-  &--triforce {
-    left: 200px;
-    top: $foot - (17 * $icon-size-var);
+  &--ganon {
+    left: 600px;
+    top: $foot - (27 * $icon-size-var);
     &:after {
-      box-shadow: pixelize($triforce);
+      box-shadow: pixelize($ganon);
+    }
+  }
+
+  $width_triforce : 8px;
+
+
+  &--triforce {
+    left: 576px;
+    top: 50px;
+    &:after {
+      box-shadow: pixelize($triforce, $width_triforce);
+      top: -$width_triforce !important;
+      left: -$width_triforce !important;
+      width: $width_triforce !important;
+      height: $width_triforce !important;
     }
   }
 }
