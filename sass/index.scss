@@ -264,6 +264,38 @@ $heart:
   (t t t b b t t t)
 ;
 
+$thelegendof:
+  (b b b t b t b t b b t t t t b t t b b t b b b t b b t b b b t b b t t t t t b b b t b b b)
+  (t b t t b t b t b t t t t t b t t b t t b t t t b t t b t b t b t b t t t t b t b t b t t)
+  (t b t t b b b t b b t t t t b t t b b t b t b t b b t b t b t b t b t t t t b t b t b b b)
+  (t b t t b t b t b t t t t t b t t b t t b t b t b t t b t b t b t b t t t t b t b t b t t)
+  (t b t t b t b t b b t t t t b b t b b t b b b t b b t b t b t b b t t t t t b b b t b t t)
+;
+
+$myzelda:
+  (t t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t b b b b b b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b b t t t t t t t b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b t b t t t t t t b b b b t b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (b t b t t t t t t b b b b t b t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t t t t b b b b t b t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t t t b b b b t b t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t t b b b b t b t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t t b b b b t b t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t b b b b t b t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t t b b b b t b t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t b b b b t b t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t t b b b b t b t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t b b b b t b t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t t b b b b t b t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t b b b b t b t t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t t b b b b t b t t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t b b b b t b t t t t t t t b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t b b b b t b t t t t t t b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b b b b t t t t t t t t t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+;
 
 
 body {
@@ -338,6 +370,22 @@ $foot : 540px;
     top: $foot - (27 * $icon-size-var);
     &:after {
       box-shadow: pixelize($ganon);
+    }
+  }
+
+  &--thelegendof {
+    left: 200px;
+    top: 200px;
+    &:after {
+      box-shadow: pixelize($thelegendof);
+    }
+  }
+
+  &--myzelda {
+    left: 600px;
+    top: 200px;
+    &:after {
+      box-shadow: pixelize($myzelda);
     }
   }
 
