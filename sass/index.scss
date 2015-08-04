@@ -190,7 +190,7 @@ $triforce:
   (b b b b b b b b b b b b b b b b b)
 ;
 
-$cloud :
+$cloud:
   (t t t t t t t w w w w w w t t t t t)
   (t t t t t t w w z z z z w w t t t t)
   (t t t w w w w z w w w w z w w t t t)
@@ -205,7 +205,7 @@ $cloud :
   (t w w w w w w w w w w w w w w w w t)
 ;
 
-$navi :
+$navi:
   (t b b b t t t t t t t t t t t t t t t t t t t t t t t t t)
   (b w w w b t t t t t t t t t t t t t t t t t t t t t t t t)
   (b w w w w b t t t t t t t t t t t t t t t t t t t t t t t)
@@ -233,6 +233,26 @@ $navi :
   (t t t t b w w w w b b b b b t t b w w b t t t t t t t t t)
   (t t t t t b w w w b t t t t t t t b b t t t t t t t t t t)
   (t t t t t t b b b t t t t t t t t t t t t t t t t t t t t)
+;
+
+$key:
+  (t t b t t t t t t t t b t t)
+  (t b y b t b b b b t b y b t)
+  (b y y b b y y y y b b y y t)
+  (b y y y y y y y y y y y y b)
+  (t b y y y y y y y y y y b t)
+  (t t b y b y y y y b y b t t)
+  (t b y y b b y y b b y y b t)
+  (t b y y y b y y b y y y b t)
+  (t t b y y y y y y y y b t t)
+  (t t t b b y y y y b b t t t)
+  (t t t t t b y y b t t t t t)
+  (t t t t t b y y b b t t t t)
+  (t t t t t b y y y y b t t t)
+  (t t t t t b y y y y b t t t)
+  (t t t t t b y y b b t t t t)
+  (t t t t t t b b t t t t t t)
+
 ;
 
 
@@ -338,6 +358,20 @@ $foot : 540px;
       left: -$width_navi !important;
       width: $width_navi !important;
       height: $width_navi !important;
+    }
+  }
+
+  $width_key : 2px;
+
+  &--key {
+    left: 629px;
+    top: $foot - (38 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($key, $width_key);
+      top: -$width_key !important;
+      left: -$width_key !important;
+      width: $width_key !important;
+      height: $width_key !important;
     }
   }
 
