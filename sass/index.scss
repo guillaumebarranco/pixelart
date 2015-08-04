@@ -29,13 +29,7 @@ $icon-size-var : 5px;
         }
         @if $item == g {
           $shadows:  $shadows + green;
-        }
-        @if $item == x{
-          $shadows:  $shadows + hotpink;
-        }
-        @if $item == w{
-          $shadows:  $shadows + white;
-        }
+        }        
         @if $item == k {
           $shadows:  $shadows + #5F021F; // bordeaux
         }
@@ -60,14 +54,20 @@ $icon-size-var : 5px;
         @if $item == v {
           $shadows:  $shadows + purple;
         }
+        @if $item == w{
+          $shadows:  $shadows + white;
+        }
+        @if $item == x{
+          $shadows:  $shadows + hotpink;
+        }
         @if $item == y {
           $shadows:  $shadows + yellow;
         }
         @if $item == z {
           $shadows:  $shadows + grey;
         }
-        
-        
+
+
         @if $item == aq {
           $shadows:  $shadows + aqua;
         }
@@ -252,7 +252,16 @@ $key:
   (t t t t t b y y y y b t t t)
   (t t t t t b y y b b t t t t)
   (t t t t t t b b t t t t t t)
+;
 
+$heart:
+  (t b b t b b b t)
+  (b w r b r r m b)
+  (b w r r r r m b)
+  (b w r r r r m b)
+  (t b r r r m b t)
+  (t t b m m b t t)
+  (t t t b b t t t)
 ;
 
 
@@ -372,6 +381,21 @@ $foot : 540px;
       left: -$width_key !important;
       width: $width_key !important;
       height: $width_key !important;
+    }
+  }
+
+
+  $width_heart : 3px;
+
+  &--heart {
+    left: 890px;
+    top: $foot - (22 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($heart, $width_heart);
+      top: -$width_heart !important;
+      left: -$width_heart !important;
+      width: $width_heart !important;
+      height: $width_heart !important;
     }
   }
 
