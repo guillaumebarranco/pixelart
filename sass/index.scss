@@ -1,3 +1,7 @@
+/*
+* Merci beaucoup à http://una.im/sass-pixel-art/
+*/
+
 $icon-size-var : 5px;
 
 @function pixelize($matrix, $size: $icon-size-var, $color: hotpink) {
@@ -273,28 +277,28 @@ $thelegendof:
 ;
 
 $myzelda:
-  (t t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t b b b b b b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b b t t t t t t t b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b t b t t t t t t b b b b t b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (b t b t t t t t t b b b b t b t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t t t t b b b b t b t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t t t b b b b t b t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t t b b b b t b t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t t b b b b t b t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t b b b b t b t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t t b b b b t b t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t b b b b t b t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t t b b b b t b t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t b b b b t b t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t t b b b b t b t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t b b b b t b t t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t t b b b b t b t t t t t t t b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t b b b b t b t t t t t t t b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t b b b b t b t t t t t t b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b b b b t t t t t t t t t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t t b b b b b b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b b t t t t t t t b b b b b b b b b b b b b b b b b b t b b b b b b t t t t t b b b b b t b t t t)
+  (t b t b t t t t t t b b b b t b b b b b b b b t b b b t b t b b b b b b b t b t t b b b b t b t t t)
+  (b t b t t t t t t b b b b t b t b b t t t b b t b b t b t t t b b b b b b b t b t b b b b t b t t t)
+  (t t t t t t t t t b b b b t b t b b t b t t b t b b t b t t t b b b t b b b b t b b b b b b t b t t)
+  (t t t t t t t t b b b b t b t t b b t b t t b t b b t b t t t b b b t t b b b t b b t b b b t b t t)
+  (t t t t t t t b b b b t b t t t b b t b t t b t b b t b t t t b b b t t b b b b b b t b b b t b t t)
+  (t t t t t t t b b b b t b t t t b b t t b t t t b b t b t t t b b b t b t b b b b b t b b b t b t t)
+  (t t t t t t b b b b t b t t t t b b t b b t b t b b t b t t t b b b t b t b b b b b t b b b t b t t)
+  (t t t t t t b b b b t b t t t t b b b b b t b t b b t b t t t b b b t b t b b b b b t b b b t b t t)
+  (t t t t t b b b b t b t t t t t b b t b b t b t b b t b t t t b b b t b t b b b b b b b b b t b t t)
+  (t t t t t b b b b t b t t t t t b b t t b t t t b b t b t t t b b b t b t b b b b b b b b b t b t t)
+  (t t t t b b b b t b t t t t t t b b t b t t b t b b t b t b t b b b t t b b b b b t t t b b b t b t)
+  (t t t t b b b b t b t t t t t t b b t b t t b t b b t b t b t b b b t t b b b b b t b t b b b t b t)
+  (t t t b b b b t b t t t t t t t b b t b t t b t b b t t b b t b b b t b b b b b b t b t b b b t b t)
+  (t t t b b b b t b t t t t t t t b b t t t b b t b b t t b b t b b b b b b b t b b t b t b b b t b t)
+  (t t b b b b t b t t t t t t t b b b b b b b b t b b b b b b b b b b b b b t b b b b t b b b b t b t)
+  (t t b b b b t b t t t t t t b b b b b b b b b b b b b b b b b b b b b b t b b b b b t b b b b b t b)
+  (t b b b b t t t t t t t t t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
+  (b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
 ;
 
 
