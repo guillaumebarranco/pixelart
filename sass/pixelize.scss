@@ -1,0 +1,88 @@
+/*
+* Merci beaucoup à http://una.im/sass-pixel-art/
+*/
+
+$icon-size-var : 5px;
+
+@function pixelize($matrix, $size: $icon-size-var, $color: hotpink) {
+
+  $l: length($matrix); // Taille de la Matrice
+  $shadows: ''; // Liste des ombres
+  $i: $l; // Taille d'une ligne de la Matrice
+  
+  // Lecture de tous les éléments de la liste
+  @for $i from 1 through $l {
+    $row: nth($matrix, $i); // Une ligne de la liste
+
+    @for $j from 1 through length($row){
+
+        $item: nth($row, $j); // Un élément de la ligne
+
+        $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ';
+
+        @if $item == a {
+          $shadows:  $shadows + blue; // a pour azur
+        }
+        @if $item == b {
+          $shadows:  $shadows + black;
+        }
+        @if $item == c {
+          $shadows:  $shadows + aqua;
+        }
+        @if $item == d {
+          $shadows:  $shadows + dodgerblue;
+        }
+        @if $item == e {
+          $shadows:  $shadows + #d2cab5; // beige
+        }
+        @if $item == g {
+          $shadows:  $shadows + green;
+        }        
+        @if $item == k {
+          $shadows:  $shadows + #5F021F; // bordeaux
+        }
+        @if $item == m {
+          $shadows:  $shadows + maroon;
+        }
+        @if $item == o {
+          $shadows:  $shadows + orange;
+        }
+        @if $item == p {
+          $shadows:  $shadows + hotpink;
+        }
+        @if $item == q {
+          $shadows:  $shadows + #e2c2cd; // rose clair
+        }
+        @if $item == r {
+          $shadows:  $shadows + red;
+        }
+        @if $item == t {
+          $shadows:  $shadows + transparent;
+        }
+        @if $item == v {
+          $shadows:  $shadows + purple;
+        }
+        @if $item == w{
+          $shadows:  $shadows + white;
+        }
+        @if $item == x{
+          $shadows:  $shadows + hotpink;
+        }
+        @if $item == y {
+          $shadows:  $shadows + yellow;
+        }
+        @if $item == z {
+          $shadows:  $shadows + grey;
+        }        
+        
+
+      // En arrivant à la fin de la ligne, ajout d'une virgule pour séparer les ombres
+      @if not ($j == length($row) and $i == $l) {
+        $shadows: $shadows + ',';
+      }
+    }
+  }
+
+  // Renvoi de la box-shadow
+  @return unquote($shadows);
+}

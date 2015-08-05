@@ -1,306 +1,24 @@
-/*
-* Merci beaucoup à http://una.im/sass-pixel-art/
-*/
+@function changeSize($size) {
+  
+  $elements : '';
 
-$icon-size-var : 5px;
+  $elements : $elements + 'top: -20px !important';
+  $elements : $elements + 'left: -20px !important';
+  $elements : $elements + 'width: 20px !important';
+  $elements : $elements + 'height: 20px !important';
 
-@function pixelize($matrix, $size: $icon-size-var, $color: hotpink) {
-
-  $l: length($matrix); // Taille de la Matrice
-  $shadows: ''; // Liste des ombres
-  $i: $l; // Taille d'une ligne de la Matrice
-// Lecture de tous les éléments de la liste
-  @for $i from 1 through $l {
-    $row: nth($matrix, $i); // Une ligne de la liste
-
-    @for $j from 1 through length($row){
-
-        $item: nth($row, $j); // Un élément de la ligne
-
-        $shadows:  $shadows + ($j*$size) + ' ' + ($i*$size) + ' ';
-
-        @if $item == a {
-          $shadows:  $shadows + blue; // a pour azur
-        }
-        @if $item == b {
-          $shadows:  $shadows + black;
-        }
-        @if $item == d {
-          $shadows:  $shadows + dodgerblue;
-        }
-        @if $item == e {
-          $shadows:  $shadows + #d2cab5; // beige
-        }
-        @if $item == g {
-          $shadows:  $shadows + green;
-        }        
-        @if $item == k {
-          $shadows:  $shadows + #5F021F; // bordeaux
-        }
-        @if $item == m {
-          $shadows:  $shadows + maroon;
-        }
-        @if $item == o {
-          $shadows:  $shadows + orange;
-        }
-        @if $item == p {
-          $shadows:  $shadows + hotpink;
-        }
-        @if $item == q {
-          $shadows:  $shadows + #e2c2cd; // rose clair
-        }
-        @if $item == r {
-          $shadows:  $shadows + red;
-        }
-        @if $item == t {
-          $shadows:  $shadows + transparent;
-        }
-        @if $item == v {
-          $shadows:  $shadows + purple;
-        }
-        @if $item == w{
-          $shadows:  $shadows + white;
-        }
-        @if $item == x{
-          $shadows:  $shadows + hotpink;
-        }
-        @if $item == y {
-          $shadows:  $shadows + yellow;
-        }
-        @if $item == z {
-          $shadows:  $shadows + grey;
-        }
-
-
-        @if $item == aq {
-          $shadows:  $shadows + aqua;
-        }
-        
-
-      // En arrivant à la fin de la ligne, ajout d'une virgule pour séparer les ombres
-      @if not ($j == length($row) and $i == $l) {
-        $shadows: $shadows + ',';
-      }
-    }
-  }
-
-  // Renvoi de la box-shadow
-  @return unquote($shadows);
+  @return $elements;
 }
 
+@function calcPx($one, $two) {
+  @return ($one * $two);
+}
+
+@import 'pixelize.scss';
 @import 'field.scss';
-
-// LINK
-$link:
-  (t t t t t t b g g g g b t t t t t t)
-  (t t t t t b g g g g g g b t t t t t)
-  (t t t t b g g g g g g g g b t t t t)
-  (t t t b g g g g g g g g g g b t t t)
-  (t t t b g g y y y y y y g g b t t t)
-  (t t b g b y y y y y y y y b g b t t)
-  (b q b b o y o y y y o b y y b b q b)
-  (b e e b y b y y y y b q b y b e e b)
-  (t b q b b o y y o b q e b o b q b t)
-  (t t b y b o o b b q e e q b y b t t)
-  (t t b y b b b b q e b b b b y b t t)
-  (t t b o b w a b e e b a w b o b t t)
-  (t t t b b e a w e e w a e b b t t t)
-  (t t t t b b e e e e e e b b t t t t)
-  (t t t b g b b q q q q b b g b t t t)
-  (t t b g g g g g g g g g g g g b t t)
-  (t b e e b b g g g g g g b b e e b t)
-  (t b q e g g b b y y b b g g e q b t)
-  (t t b b b g g g y y g g g b b b t t)
-  (t t t t b b g g g g g g b b t t t t)
-  (t t t b p b b b b b b b b p b t t t)
-  (t t t b p p b b t t b b p p b t t t)
-  (t t t t b b b t t t t b b b t t t t)
-;
-
-// ZELDA
-$zelda:
-  (t t t b t t t m m m m t t t b t t t)
-  (t t t z t m o y y y y o m t z t t t)
-  (t t b w m o y y y y y y o m w b t t)
-  (t t b w o y y y y y y y y o w b t t)
-  (t t b w y y y y y y y y y y w b t t)
-  (t t b w y y y y y y y y y y w b t t)
-  (b w b w y o y y o o y y o y z b z b)
-  (b z w b y m o o w r o o m y b z w b)
-  (t b z m y y m o r r o m y o m w b t)
-  (t t b m o y y y m m e e e e m b t t)
-  (t t t m e m a o o e e a m e m t t t)
-  (t t m o e e a e e e e a e e o m t t)
-  (t t o y m q p e e e e p q m y o t t)
-  (t t o y p m e e e e e e m p y o t t)
-  (t t o m q p m m m m m m p q m o t t)
-  (t t m z z b v v v v v v b z z m t t)
-  (t t b w z b y v v v v y b z w b t t)
-  (t b w z b p m y y y y m p b z w b t)
-  (t t b b p q p b y y b p q p b b t t)
-  (t t t v q q q a a a a q q q v t t t)
-  (t t t v p q q a a a a q q p v t t t)
-  (t t t t v p q a a a a q p v t t t t)
-  (t t t t t t v v a a v v t t t t t t)
-;
-
-$ganon:
-  (t t t t t t b k r r k b t t t t t t)
-  (t t t t b r z z z z z z r b t t t t)
-  (t t b r z z k r k r r k z z r b t t)
-  (t b z z r r k r r r r r r r z z b t)
-  (b z k r b b b b b b b b b b r k z b)
-  (b r b b z z z z z z z z z z b b r z)
-  (k r z z z z z z v v z z z z z z r k)
-  (k r z z z z b b v v b b z z z z r k)
-  (b k r k b z z z z z z z z b k r k b)
-  (b b k r r r b z b z z b r r r k b b)
-  (b z b z z b z z z z z z b z z b z b)
-  (b z z w o b z z z z z z b o w z z b)
-  (t z z z y b y z b z z y b y z z z t)
-  (t b z z z o z z b z z z o z z z b t)
-  (t t b z z z z z b b z z z z z b t t)
-  (t t t z z z z z z z z z z z z t t t)
-  (t t b b b b b b b b b b b b b b t t)
-  (t b b b z z z z z z z z z z b b b t)
-  (b m b m b b b b b b b b b b m b m b)
-  (b b b m m m m m m m m m m m m b b b)
-  (z z w b m m m m m m m m m m b w z z)
-  (b z w b b b b b m m b b b b b w z z)
-  (b z z b b m m m m m m m m b b z z b)
-  (t b b t b z z z z z z z z b t b b t)
-  (t t t t b z w b b b b w z b t t t t)
-  (t t t t b m m b t t b m m b t t t t)
-  (t t t t t b b t t t t b b t t t t t)
-;
-
-$triforce:
-  (t t t t t t t t b t t t t t t t t)
-  (t t t t t t t b y b t t t t t t t)
-  (t t t t t t t b y b t t t t t t t)
-  (t t t t t t b y y y b t t t t t t)
-  (t t t t t t b y y y b t t t t t t)
-  (t t t t t b y y y y y b t t t t t)
-  (t t t t t b y y y y y b t t t t t)
-  (t t t t b y y y y y y y b t t t t)
-  (t t t t b b b b b b b b b t t t t)
-  (t t t b y b t t t t t b y b t t t)
-  (t t t b y b t t t t t b y b t t t)
-  (t t b y y y b t t t b y y y b t t)
-  (t t b y y y b t t t b y y y b t t)
-  (t b y y y y y b t b y y y y y b t)
-  (t b y y y y y b t b y y y y y b t)
-  (b y y y y y y y b y y y y y y y b)
-  (b b b b b b b b b b b b b b b b b)
-;
-
-$cloud:
-  (t t t t t t t w w w w w w t t t t t)
-  (t t t t t t w w z z z z w w t t t t)
-  (t t t w w w w z w w w w z w w t t t)
-  (t t w w z z z w w w w w w z w w t t)
-  (t w w z w w w w w w w w w w z w w t)
-  (w w z w w w w w w w w w w w w z w w)
-  (w z w w w w w w w w w w w w w w z w)
-  (w z w w w w w w w w w w w w w w z w)
-  (w z w w w w w w w w w w w w w w z w)
-  (w z w w w w w w w w w w w w w w z w)
-  (w w z z z z z z z z z z z z z z w w)
-  (t w w w w w w w w w w w w w w w w t)
-;
-
-$navi:
-  (t b b b t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (b w w w b t t t t t t t t t t t t t t t t t t t t t t t t)
-  (b w w w w b t t t t t t t t t t t t t t t t t t t t t t t)
-  (b w w w w b t t t t t t t t t t t t t t t t t t t b b b t)
-  (b w w w w w b t t t t t t t t t t t t t t t t b b w w w b)
-  (b w w w w w b t t t t t t t t t t t t t t b b w w w w w b)
-  (b w w w w w w b t t t t t t t t t t t t b w w w w w w w b)
-  (t b w w w w w b t t t t t t t t t t t b w w w w w w w b t)
-  (t b b w w w w b t t t t t t t t t t b w w w w w w w w b t)
-  (t t b w w w w w b t t t t t t t t b w w w w w w w w b t t)
-  (t t t b w w w w w b b b b b t t b w w w w w w w w w b t t)
-  (t t t b w w w w w a a a a a b b w w w w w w w w w b t t t)
-  (t t t t b w w w a a a a a a a b w w w w w w w w b t t t t)
-  (t t t t t b w a a d d d d d a a w w w w w w w b t t t t t)
-  (t t t t t b a a d d d d d d d a a w w w w w b t t t t t t)
-  (t t t t b a a d d d w w w d d d a a w w b b t t t t t t t)
-  (t t t t b a a d d w w w w w d d a a b b t t t t t t t t t)
-  (t t t t b a a d d w w w w w d d a a b t t t t t t t t t t)
-  (t t t t b a a d d w w w w w d d a a b t t t t t t t t t t)
-  (t t t t b a a d d d w w w d d d a a b t t t t t t t t t t)
-  (t t t t t b a a d d d d d d d d a w b t t t t t t t t t t)
-  (t t t t t b w a a d d d d d d a w w w b t t t t t t t t t)
-  (t t t t b w w w a a a a a a a w w w w w b t t t t t t t t)
-  (t t t t b w w w w a a a a a b b w w w w b t t t t t t t t)
-  (t t t t b w w w w b b b b b t t b w w b t t t t t t t t t)
-  (t t t t t b w w w b t t t t t t t b b t t t t t t t t t t)
-  (t t t t t t b b b t t t t t t t t t t t t t t t t t t t t)
-;
-
-$key:
-  (t t b t t t t t t t t b t t)
-  (t b y b t b b b b t b y b t)
-  (b y y b b y y y y b b y y t)
-  (b y y y y y y y y y y y y b)
-  (t b y y y y y y y y y y b t)
-  (t t b y b y y y y b y b t t)
-  (t b y y b b y y b b y y b t)
-  (t b y y y b y y b y y y b t)
-  (t t b y y y y y y y y b t t)
-  (t t t b b y y y y b b t t t)
-  (t t t t t b y y b t t t t t)
-  (t t t t t b y y b b t t t t)
-  (t t t t t b y y y y b t t t)
-  (t t t t t b y y y y b t t t)
-  (t t t t t b y y b b t t t t)
-  (t t t t t t b b t t t t t t)
-;
-
-$heart:
-  (t b b t b b b t)
-  (b w r b r r m b)
-  (b w r r r r m b)
-  (b w r r r r m b)
-  (t b r r r m b t)
-  (t t b m m b t t)
-  (t t t b b t t t)
-;
-
-$thelegendof:
-  (b b b t b t b t b b t t t t b t t b b t b b b t b b t b b b t b b t t t t t b b b t b b b)
-  (t b t t b t b t b t t t t t b t t b t t b t t t b t t b t b t b t b t t t t b t b t b t t)
-  (t b t t b b b t b b t t t t b t t b b t b t b t b b t b t b t b t b t t t t b t b t b b b)
-  (t b t t b t b t b t t t t t b t t b t t b t b t b t t b t b t b t b t t t t b t b t b t t)
-  (t b t t b t b t b b t t t t b b t b b t b b b t b b t b t b t b b t t t t t b b b t b t t)
-;
-
-$myzelda:
-  (t t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t t b b b b b b b b b b b b b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b b t t t t t t t b b b b b b b b b b b b b b b b b b t b b b b b b t t t t t b b b b b t b t t t)
-  (t b t b t t t t t t b b b b t b b b b b b b b t b b b t b t b b b b b b b t b t t b b b b t b t t t)
-  (b t b t t t t t t b b b b t b t b b t t t b b t b b t b t t t b b b b b b b t b t b b b b t b t t t)
-  (t t t t t t t t t b b b b t b t b b t b t t b t b b t b t t t b b b t b b b b t b b b b b b t b t t)
-  (t t t t t t t t b b b b t b t t b b t b t t b t b b t b t t t b b b t t b b b t b b t b b b t b t t)
-  (t t t t t t t b b b b t b t t t b b t b t t b t b b t b t t t b b b t t b b b b b b t b b b t b t t)
-  (t t t t t t t b b b b t b t t t b b t t b t t t b b t b t t t b b b t b t b b b b b t b b b t b t t)
-  (t t t t t t b b b b t b t t t t b b t b b t b t b b t b t t t b b b t b t b b b b b t b b b t b t t)
-  (t t t t t t b b b b t b t t t t b b b b b t b t b b t b t t t b b b t b t b b b b b t b b b t b t t)
-  (t t t t t b b b b t b t t t t t b b t b b t b t b b t b t t t b b b t b t b b b b b b b b b t b t t)
-  (t t t t t b b b b t b t t t t t b b t t b t t t b b t b t t t b b b t b t b b b b b b b b b t b t t)
-  (t t t t b b b b t b t t t t t t b b t b t t b t b b t b t b t b b b t t b b b b b t t t b b b t b t)
-  (t t t t b b b b t b t t t t t t b b t b t t b t b b t b t b t b b b t t b b b b b t b t b b b t b t)
-  (t t t b b b b t b t t t t t t t b b t b t t b t b b t t b b t b b b t b b b b b b t b t b b b t b t)
-  (t t t b b b b t b t t t t t t t b b t t t b b t b b t t b b t b b b b b b b t b b t b t b b b t b t)
-  (t t b b b b t b t t t t t t t b b b b b b b b t b b b b b b b b b b b b b t b b b b t b b b b t b t)
-  (t t b b b b t b t t t t t t b b b b b b b b b b b b b b b b b b b b b b t b b b b b t b b b b b t b)
-  (t b b b b t t t t t t t t t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (t b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-  (b b b b b b b b b b b b b b t b t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t)
-;
-
+@import 'persos.scss';
+@import 'txt.scss';
+@import 'items.scss';
 
 body {
   margin: 0;
@@ -310,13 +28,12 @@ body {
 
 $foot : 540px;
 
-
 // list we're styling
 .icons {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
 
@@ -336,83 +53,50 @@ $foot : 540px;
       //border-radius: 50%;
     }
   }
+}
+
+
+
+
+
+
+.icons {
+
+  $width_field: 20px;
   
   &--field {
     left: 0;
     top: 0;
     position: relative;
     &:after {
-      box-shadow: pixelize($field, 20px);
-      top: -20px !important;
-      left: -20px !important;
-      width: 20px !important;
-      height: 20px !important;
+      box-shadow: pixelize($field, $width_field);
+      top: -$width_field !important;
+      left: -$width_field !important;
+      width: $width_field !important;
+      height: $width_field !important;
     }
   }
+
+
+
+
+
   
   &--link {
-    left: 400px;
-
     /*
     * Le 23 CI-DESSOUS est le nombre de ligne de la matrice
     */
-
+    left: calc(34% - (12 * 5px));
     top: $foot - (23 * $icon-size-var);
     &:after {
       box-shadow: pixelize($link);
     }
   }
-  &--zelda {
-    left: 800px;
-    top: $foot - (23 * $icon-size-var);
-    &:after {
-      box-shadow: pixelize($zelda);
-    }
-  }
-  &--ganon {
-    left: 600px;
-    top: $foot - (27 * $icon-size-var);
-    &:after {
-      box-shadow: pixelize($ganon);
-    }
-  }
-
-  &--thelegendof {
-    left: 100px;
-    top: 100px;
-    &:after {
-      box-shadow: pixelize($thelegendof);
-    }
-  }
-
-  &--myzelda {
-    left: 90px;
-    top: 140px;
-    &:after {
-      box-shadow: pixelize($myzelda);
-    }
-  }
-
-  $width_cloud : 6px;
-
-  &--cloud {
-    left: 1100px;
-    top: 80px;
-
-    &:after {
-      box-shadow: pixelize($cloud, $width_cloud);
-      top: -$width_cloud !important;
-      left: -$width_cloud !important;
-      width: $width_cloud !important;
-      height: $width_cloud !important;
-    }
-  }
-
 
   $width_navi : 1px;
 
   &--navi {
-    left: 380px;
+    left: calc(29% - (15 * 1px));
     top: $foot - (24 * $icon-size-var);
     &:after {
       box-shadow: pixelize($navi, $width_navi);
@@ -423,10 +107,49 @@ $foot : 540px;
     }
   }
 
+
+
+
+
+  &--zelda {
+    left: calc(65% - (12 * 5px));
+    top: $foot - (23 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($zelda);
+    }
+  }
+
+  $width_heart : 3px;
+
+  &--heart {
+    left: calc(70% - (10 * 3px));
+    top: $foot - (22 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($heart, $width_heart);
+      top: -$width_heart !important;
+      left: -$width_heart !important;
+      width: $width_heart !important;
+      height: $width_heart !important;
+    }
+  }
+
+
+
+
+
+  &--ganon {
+    left: calc(50% - (14 * 5px));
+    //left: 600px;
+    top: $foot - (27 * $icon-size-var);
+    &:after {
+      box-shadow: pixelize($ganon);
+    }
+  }
+
   $width_key : 2px;
 
   &--key {
-    left: 629px;
+    left: calc(50% - (19 * 2px));
     top: $foot - (38 * $icon-size-var);
     &:after {
       box-shadow: pixelize($key, $width_key);
@@ -438,26 +161,52 @@ $foot : 540px;
   }
 
 
-  $width_heart : 3px;
 
-  &--heart {
-    left: 890px;
-    top: $foot - (22 * $icon-size-var);
+
+
+
+
+  &--thelegendof {
+    left: calc(15% - (23 * 5px));
+    top: 100px;
     &:after {
-      box-shadow: pixelize($heart, $width_heart);
-      top: -$width_heart !important;
-      left: -$width_heart !important;
-      width: $width_heart !important;
-      height: $width_heart !important;
+      box-shadow: pixelize($thelegendof);
     }
   }
+
+  &--myzelda {
+    left: calc(15% - (26 * 5px));
+    top: 140px;
+    &:after {
+      box-shadow: pixelize($myzelda);
+    }
+  }
+
+  $width_cloud : 6px;
+
+  &--cloud {
+    left: calc(85% - (9 * 6px));
+    top: 80px;
+
+    &:after {
+      box-shadow: pixelize($cloud, $width_cloud);
+      top: -$width_cloud !important;
+      left: -$width_cloud !important;
+      width: $width_cloud !important;
+      height: $width_cloud !important;
+    }
+  }
+
+  
 
   $width_triforce : 8px;
 
 
   &--triforce {
-    left: 576px;
-    top: 50px;
+    // On multiplie la moitié de la largeur de la ligne par la largeur d'un carré, on soustrait le tout à 50% de la largeur
+    left: calc(48% - (9 * 8px));
+    top: 50%;
+
     &:after {
       box-shadow: pixelize($triforce, $width_triforce);
       top: -$width_triforce !important;
