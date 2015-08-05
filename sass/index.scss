@@ -48,7 +48,7 @@ body {
 
     &:after {
       content: '';
-      -webkit-transition: 1s;
+      transition: 1s;
       position: absolute;
       top: -$icon-size-var;
       left: -$icon-size-var;
@@ -150,7 +150,7 @@ body {
     left: calc(29% - (15 * 1px));
     top: $foot - (24 * $icon-size-var);
     &:after {
-      -webkit-animation: navi 4s linear infinite;
+      animation: navi 4s linear infinite;
       box-shadow: pixelize($navi, $width_navi);
       top: -$width_navi !important;
       left: -$width_navi !important;
@@ -196,7 +196,7 @@ body {
     left: calc(50% - (19 * 2px));
     top: $foot - (60 * $icon-size-var);
 
-    -webkit-animation: key 5s infinite ease-in-out;
+    animation: key 5s infinite ease-in-out;
 
     &:after {
       box-shadow: pixelize($key, $width_key);
@@ -216,10 +216,10 @@ body {
     */
     top: 230px;
 
-    -webkit-transform: rotate(-80deg) scaleZ(1);
+    transform: rotate(-80deg) scaleZ(1);
     left: calc(140% - (8 * 5px));
 
-    -webkit-animation: tingle 10s infinite ease-in-out;
+    animation: tingle 10s infinite ease-in-out;
     &:after {
       box-shadow: pixelize($tingle, $width_heart);
       top: -$width_heart !important;
@@ -230,7 +230,7 @@ body {
   }
 }
 
-@-webkit-keyframes key {
+@keyframes key {
   0% {
     top: $foot - (60 * $icon-size-var);
   }
@@ -273,33 +273,33 @@ body {
 }
 
 
-@-webkit-keyframes tingle {
+@keyframes tingle {
   0% {
     left: calc(140% - (8 * 5px));
-    -webkit-transform: rotate(-80deg) scaleY(1);
+    transform: rotate(-80deg) scaleY(1);
   }
 
   40% {
-    -webkit-transform: rotate(-80deg) scaleY(1);
+    transform: rotate(-80deg) scaleY(1);
   }
 
   50% {
     left: calc(68% - (8 * 5px));
-    -webkit-transform: rotate(200deg) scaleY(-1);
+    transform: rotate(200deg) scaleY(-1);
   }
 
   90% {
-    -webkit-transform: rotate(200deg) scaleY(-1);
+    transform: rotate(200deg) scaleY(-1);
   }
 
   100% {
     left: calc(140% - (8 * 5px));
-    -webkit-transform: rotate(-80deg) scaleY(1);
+    transform: rotate(-80deg) scaleY(1);
   }
 }
 
 
-@-webkit-keyframes navi {
-  from {  -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg); }
-  to   {  -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+@keyframes navi {
+  from {  transform: rotate(0deg) translateX(50px) rotate(0deg); }
+  to   {  transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }

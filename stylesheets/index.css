@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-* Merci beaucoup ├á http://una.im/sass-pixel-art/
+* Merci beaucoup Ôö£├í http://una.im/sass-pixel-art/
 */
 /* line 23, ../sass/index.scss */
 body {
@@ -32,6 +32,7 @@ body {
 .icons li:after {
   content: '';
   -webkit-transition: 1s;
+          transition: 1s;
   position: absolute;
   top: -5px;
   left: -5px;
@@ -126,6 +127,7 @@ body {
 /* line 152, ../sass/index.scss */
 .icons--navi:after {
   -webkit-animation: navi 4s linear infinite;
+          animation: navi 4s linear infinite;
   box-shadow: 1px 1px transparent,2px 1px black,3px 1px black,4px 1px black,5px 1px transparent,6px 1px transparent,7px 1px transparent,8px 1px transparent,9px 1px transparent,10px 1px transparent,11px 1px transparent,12px 1px transparent,13px 1px transparent,14px 1px transparent,15px 1px transparent,16px 1px transparent,17px 1px transparent,18px 1px transparent,19px 1px transparent,20px 1px transparent,21px 1px transparent,22px 1px transparent,23px 1px transparent,24px 1px transparent,25px 1px transparent,26px 1px transparent,27px 1px transparent,28px 1px transparent,29px 1px transparent,1px 2px black,2px 2px white,3px 2px white,4px 2px white,5px 2px black,6px 2px transparent,7px 2px transparent,8px 2px transparent,9px 2px transparent,10px 2px transparent,11px 2px transparent,12px 2px transparent,13px 2px transparent,14px 2px transparent,15px 2px transparent,16px 2px transparent,17px 2px transparent,18px 2px transparent,19px 2px transparent,20px 2px transparent,21px 2px transparent,22px 2px transparent,23px 2px transparent,24px 2px transparent,25px 2px transparent,26px 2px transparent,27px 2px transparent,28px 2px transparent,29px 2px transparent,1px 3px black,2px 3px white,3px 3px white,4px 3px white,5px 3px white,6px 3px black,7px 3px transparent,8px 3px transparent,9px 3px transparent,10px 3px transparent,11px 3px transparent,12px 3px transparent,13px 3px transparent,14px 3px transparent,15px 3px transparent,16px 3px transparent,17px 3px transparent,18px 3px transparent,19px 3px transparent,20px 3px transparent,21px 3px transparent,22px 3px transparent,23px 3px transparent,24px 3px transparent,25px 3px transparent,26px 3px transparent,27px 3px transparent,28px 3px transparent,29px 3px transparent,1px 4px black,2px 4px white,3px 4px white,4px 4px white,5px 4px white,6px 4px black,7px 4px transparent,8px 4px transparent,9px 4px transparent,10px 4px transparent,11px 4px transparent,12px 4px transparent,13px 4px transparent,14px 4px transparent,15px 4px transparent,16px 4px transparent,17px 4px transparent,18px 4px transparent,19px 4px transparent,20px 4px transparent,21px 4px transparent,22px 4px transparent,23px 4px transparent,24px 4px transparent,25px 4px transparent,26px 4px black,27px 4px black,28px 4px black,29px 4px transparent,1px 5px black,2px 5px white,3px 5px white,4px 5px white,5px 5px white,6px 5px white,7px 5px black,8px 5px transparent,9px 5px transparent,10px 5px transparent,11px 5px transparent,12px 5px transparent,13px 5px transparent,14px 5px transparent,15px 5px transparent,16px 5px transparent,17px 5px transparent,18px 5px transparent,19px 5px transparent,20px 5px transparent,21px 5px transparent,22px 5px transparent,23px 5px transparent,24px 5px black,25px 5px black,26px 5px white,27px 5px white,28px 5px white,29px 5px black,1px 6px black,2px 6px white,3px 6px white,4px 6px white,5px 6px white,6px 6px white,7px 6px black,8px 6px transparent,9px 6px transparent,10px 6px transparent,11px 6px transparent,12px 6px transparent,13px 6px transparent,14px 6px transparent,15px 6px transparent,16px 6px transparent,17px 6px transparent,18px 6px transparent,19px 6px transparent,20px 6px transparent,21px 6px transparent,22px 6px black,23px 6px black,24px 6px white,25px 6px white,26px 6px white,27px 6px white,28px 6px white,29px 6px black,1px 7px black,2px 7px white,3px 7px white,4px 7px white,5px 7px white,6px 7px white,7px 7px white,8px 7px black,9px 7px transparent,10px 7px transparent,11px 7px transparent,12px 7px transparent,13px 7px transparent,14px 7px transparent,15px 7px transparent,16px 7px transparent,17px 7px transparent,18px 7px transparent,19px 7px transparent,20px 7px transparent,21px 7px black,22px 7px white,23px 7px white,24px 7px white,25px 7px white,26px 7px white,27px 7px white,28px 7px white,29px 7px black,1px 8px transparent,2px 8px black,3px 8px white,4px 8px white,5px 8px white,6px 8px white,7px 8px white,8px 8px black,9px 8px transparent,10px 8px transparent,11px 8px transparent,12px 8px transparent,13px 8px transparent,14px 8px transparent,15px 8px transparent,16px 8px transparent,17px 8px transparent,18px 8px transparent,19px 8px transparent,20px 8px black,21px 8px white,22px 8px white,23px 8px white,24px 8px white,25px 8px white,26px 8px white,27px 8px white,28px 8px black,29px 8px transparent,1px 9px transparent,2px 9px black,3px 9px black,4px 9px white,5px 9px white,6px 9px white,7px 9px white,8px 9px black,9px 9px transparent,10px 9px transparent,11px 9px transparent,12px 9px transparent,13px 9px transparent,14px 9px transparent,15px 9px transparent,16px 9px transparent,17px 9px transparent,18px 9px transparent,19px 9px black,20px 9px white,21px 9px white,22px 9px white,23px 9px white,24px 9px white,25px 9px white,26px 9px white,27px 9px white,28px 9px black,29px 9px transparent,1px 10px transparent,2px 10px transparent,3px 10px black,4px 10px white,5px 10px white,6px 10px white,7px 10px white,8px 10px white,9px 10px black,10px 10px transparent,11px 10px transparent,12px 10px transparent,13px 10px transparent,14px 10px transparent,15px 10px transparent,16px 10px transparent,17px 10px transparent,18px 10px black,19px 10px white,20px 10px white,21px 10px white,22px 10px white,23px 10px white,24px 10px white,25px 10px white,26px 10px white,27px 10px black,28px 10px transparent,29px 10px transparent,1px 11px transparent,2px 11px transparent,3px 11px transparent,4px 11px black,5px 11px white,6px 11px white,7px 11px white,8px 11px white,9px 11px white,10px 11px black,11px 11px black,12px 11px black,13px 11px black,14px 11px black,15px 11px transparent,16px 11px transparent,17px 11px black,18px 11px white,19px 11px white,20px 11px white,21px 11px white,22px 11px white,23px 11px white,24px 11px white,25px 11px white,26px 11px white,27px 11px black,28px 11px transparent,29px 11px transparent,1px 12px transparent,2px 12px transparent,3px 12px transparent,4px 12px black,5px 12px white,6px 12px white,7px 12px white,8px 12px white,9px 12px white,10px 12px blue,11px 12px blue,12px 12px blue,13px 12px blue,14px 12px blue,15px 12px black,16px 12px black,17px 12px white,18px 12px white,19px 12px white,20px 12px white,21px 12px white,22px 12px white,23px 12px white,24px 12px white,25px 12px white,26px 12px black,27px 12px transparent,28px 12px transparent,29px 12px transparent,1px 13px transparent,2px 13px transparent,3px 13px transparent,4px 13px transparent,5px 13px black,6px 13px white,7px 13px white,8px 13px white,9px 13px blue,10px 13px blue,11px 13px blue,12px 13px blue,13px 13px blue,14px 13px blue,15px 13px blue,16px 13px black,17px 13px white,18px 13px white,19px 13px white,20px 13px white,21px 13px white,22px 13px white,23px 13px white,24px 13px white,25px 13px black,26px 13px transparent,27px 13px transparent,28px 13px transparent,29px 13px transparent,1px 14px transparent,2px 14px transparent,3px 14px transparent,4px 14px transparent,5px 14px transparent,6px 14px black,7px 14px white,8px 14px blue,9px 14px blue,10px 14px dodgerblue,11px 14px dodgerblue,12px 14px dodgerblue,13px 14px dodgerblue,14px 14px dodgerblue,15px 14px blue,16px 14px blue,17px 14px white,18px 14px white,19px 14px white,20px 14px white,21px 14px white,22px 14px white,23px 14px white,24px 14px black,25px 14px transparent,26px 14px transparent,27px 14px transparent,28px 14px transparent,29px 14px transparent,1px 15px transparent,2px 15px transparent,3px 15px transparent,4px 15px transparent,5px 15px transparent,6px 15px black,7px 15px blue,8px 15px blue,9px 15px dodgerblue,10px 15px dodgerblue,11px 15px dodgerblue,12px 15px dodgerblue,13px 15px dodgerblue,14px 15px dodgerblue,15px 15px dodgerblue,16px 15px blue,17px 15px blue,18px 15px white,19px 15px white,20px 15px white,21px 15px white,22px 15px white,23px 15px black,24px 15px transparent,25px 15px transparent,26px 15px transparent,27px 15px transparent,28px 15px transparent,29px 15px transparent,1px 16px transparent,2px 16px transparent,3px 16px transparent,4px 16px transparent,5px 16px black,6px 16px blue,7px 16px blue,8px 16px dodgerblue,9px 16px dodgerblue,10px 16px dodgerblue,11px 16px white,12px 16px white,13px 16px white,14px 16px dodgerblue,15px 16px dodgerblue,16px 16px dodgerblue,17px 16px blue,18px 16px blue,19px 16px white,20px 16px white,21px 16px black,22px 16px black,23px 16px transparent,24px 16px transparent,25px 16px transparent,26px 16px transparent,27px 16px transparent,28px 16px transparent,29px 16px transparent,1px 17px transparent,2px 17px transparent,3px 17px transparent,4px 17px transparent,5px 17px black,6px 17px blue,7px 17px blue,8px 17px dodgerblue,9px 17px dodgerblue,10px 17px white,11px 17px white,12px 17px white,13px 17px white,14px 17px white,15px 17px dodgerblue,16px 17px dodgerblue,17px 17px blue,18px 17px blue,19px 17px black,20px 17px black,21px 17px transparent,22px 17px transparent,23px 17px transparent,24px 17px transparent,25px 17px transparent,26px 17px transparent,27px 17px transparent,28px 17px transparent,29px 17px transparent,1px 18px transparent,2px 18px transparent,3px 18px transparent,4px 18px transparent,5px 18px black,6px 18px blue,7px 18px blue,8px 18px dodgerblue,9px 18px dodgerblue,10px 18px white,11px 18px white,12px 18px white,13px 18px white,14px 18px white,15px 18px dodgerblue,16px 18px dodgerblue,17px 18px blue,18px 18px blue,19px 18px black,20px 18px transparent,21px 18px transparent,22px 18px transparent,23px 18px transparent,24px 18px transparent,25px 18px transparent,26px 18px transparent,27px 18px transparent,28px 18px transparent,29px 18px transparent,1px 19px transparent,2px 19px transparent,3px 19px transparent,4px 19px transparent,5px 19px black,6px 19px blue,7px 19px blue,8px 19px dodgerblue,9px 19px dodgerblue,10px 19px white,11px 19px white,12px 19px white,13px 19px white,14px 19px white,15px 19px dodgerblue,16px 19px dodgerblue,17px 19px blue,18px 19px blue,19px 19px black,20px 19px transparent,21px 19px transparent,22px 19px transparent,23px 19px transparent,24px 19px transparent,25px 19px transparent,26px 19px transparent,27px 19px transparent,28px 19px transparent,29px 19px transparent,1px 20px transparent,2px 20px transparent,3px 20px transparent,4px 20px transparent,5px 20px black,6px 20px blue,7px 20px blue,8px 20px dodgerblue,9px 20px dodgerblue,10px 20px dodgerblue,11px 20px white,12px 20px white,13px 20px white,14px 20px dodgerblue,15px 20px dodgerblue,16px 20px dodgerblue,17px 20px blue,18px 20px blue,19px 20px black,20px 20px transparent,21px 20px transparent,22px 20px transparent,23px 20px transparent,24px 20px transparent,25px 20px transparent,26px 20px transparent,27px 20px transparent,28px 20px transparent,29px 20px transparent,1px 21px transparent,2px 21px transparent,3px 21px transparent,4px 21px transparent,5px 21px transparent,6px 21px black,7px 21px blue,8px 21px blue,9px 21px dodgerblue,10px 21px dodgerblue,11px 21px dodgerblue,12px 21px dodgerblue,13px 21px dodgerblue,14px 21px dodgerblue,15px 21px dodgerblue,16px 21px dodgerblue,17px 21px blue,18px 21px white,19px 21px black,20px 21px transparent,21px 21px transparent,22px 21px transparent,23px 21px transparent,24px 21px transparent,25px 21px transparent,26px 21px transparent,27px 21px transparent,28px 21px transparent,29px 21px transparent,1px 22px transparent,2px 22px transparent,3px 22px transparent,4px 22px transparent,5px 22px transparent,6px 22px black,7px 22px white,8px 22px blue,9px 22px blue,10px 22px dodgerblue,11px 22px dodgerblue,12px 22px dodgerblue,13px 22px dodgerblue,14px 22px dodgerblue,15px 22px dodgerblue,16px 22px blue,17px 22px white,18px 22px white,19px 22px white,20px 22px black,21px 22px transparent,22px 22px transparent,23px 22px transparent,24px 22px transparent,25px 22px transparent,26px 22px transparent,27px 22px transparent,28px 22px transparent,29px 22px transparent,1px 23px transparent,2px 23px transparent,3px 23px transparent,4px 23px transparent,5px 23px black,6px 23px white,7px 23px white,8px 23px white,9px 23px blue,10px 23px blue,11px 23px blue,12px 23px blue,13px 23px blue,14px 23px blue,15px 23px blue,16px 23px white,17px 23px white,18px 23px white,19px 23px white,20px 23px white,21px 23px black,22px 23px transparent,23px 23px transparent,24px 23px transparent,25px 23px transparent,26px 23px transparent,27px 23px transparent,28px 23px transparent,29px 23px transparent,1px 24px transparent,2px 24px transparent,3px 24px transparent,4px 24px transparent,5px 24px black,6px 24px white,7px 24px white,8px 24px white,9px 24px white,10px 24px blue,11px 24px blue,12px 24px blue,13px 24px blue,14px 24px blue,15px 24px black,16px 24px black,17px 24px white,18px 24px white,19px 24px white,20px 24px white,21px 24px black,22px 24px transparent,23px 24px transparent,24px 24px transparent,25px 24px transparent,26px 24px transparent,27px 24px transparent,28px 24px transparent,29px 24px transparent,1px 25px transparent,2px 25px transparent,3px 25px transparent,4px 25px transparent,5px 25px black,6px 25px white,7px 25px white,8px 25px white,9px 25px white,10px 25px black,11px 25px black,12px 25px black,13px 25px black,14px 25px black,15px 25px transparent,16px 25px transparent,17px 25px black,18px 25px white,19px 25px white,20px 25px black,21px 25px transparent,22px 25px transparent,23px 25px transparent,24px 25px transparent,25px 25px transparent,26px 25px transparent,27px 25px transparent,28px 25px transparent,29px 25px transparent,1px 26px transparent,2px 26px transparent,3px 26px transparent,4px 26px transparent,5px 26px transparent,6px 26px black,7px 26px white,8px 26px white,9px 26px white,10px 26px black,11px 26px transparent,12px 26px transparent,13px 26px transparent,14px 26px transparent,15px 26px transparent,16px 26px transparent,17px 26px transparent,18px 26px black,19px 26px black,20px 26px transparent,21px 26px transparent,22px 26px transparent,23px 26px transparent,24px 26px transparent,25px 26px transparent,26px 26px transparent,27px 26px transparent,28px 26px transparent,29px 26px transparent,1px 27px transparent,2px 27px transparent,3px 27px transparent,4px 27px transparent,5px 27px transparent,6px 27px transparent,7px 27px black,8px 27px black,9px 27px black,10px 27px transparent,11px 27px transparent,12px 27px transparent,13px 27px transparent,14px 27px transparent,15px 27px transparent,16px 27px transparent,17px 27px transparent,18px 27px transparent,19px 27px transparent,20px 27px transparent,21px 27px transparent,22px 27px transparent,23px 27px transparent,24px 27px transparent,25px 27px transparent,26px 27px transparent,27px 27px transparent,28px 27px transparent,29px 27px transparent;
   top: -1px !important;
   left: -1px !important;
@@ -168,6 +170,7 @@ body {
   left: calc(50% - (19 * 2px));
   top: 240px;
   -webkit-animation: key 5s infinite ease-in-out;
+          animation: key 5s infinite ease-in-out;
 }
 /* line 201, ../sass/index.scss */
 .icons--key:after {
@@ -184,8 +187,10 @@ body {
   */
   top: 230px;
   -webkit-transform: rotate(-80deg) scaleZ(1);
+          transform: rotate(-80deg) scaleZ(1);
   left: calc(140% - (8 * 5px));
   -webkit-animation: tingle 10s infinite ease-in-out;
+          animation: tingle 10s infinite ease-in-out;
 }
 /* line 223, ../sass/index.scss */
 .icons--tingle:after {
@@ -228,31 +233,106 @@ body {
     top: 240px;
   }
 }
+
+@keyframes key {
+  0% {
+    top: 240px;
+  }
+  40% {
+    top: 374px;
+  }
+  45% {
+    top: 370px;
+  }
+  50% {
+    top: 374px;
+  }
+  55% {
+    top: 370px;
+  }
+  60% {
+    top: 374px;
+  }
+  65% {
+    top: 370px;
+  }
+  70% {
+    top: 374px;
+  }
+  80% {
+    top: 374px;
+  }
+  100% {
+    top: 240px;
+  }
+}
 @-webkit-keyframes tingle {
   0% {
     left: calc(140% - (8 * 5px));
     -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
   }
   40% {
     -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
   }
   50% {
     left: calc(68% - (8 * 5px));
     -webkit-transform: rotate(200deg) scaleY(-1);
+            transform: rotate(200deg) scaleY(-1);
   }
   90% {
     -webkit-transform: rotate(200deg) scaleY(-1);
+            transform: rotate(200deg) scaleY(-1);
   }
   100% {
     left: calc(140% - (8 * 5px));
     -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
+  }
+}
+@keyframes tingle {
+  0% {
+    left: calc(140% - (8 * 5px));
+    -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
+  }
+  40% {
+    -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
+  }
+  50% {
+    left: calc(68% - (8 * 5px));
+    -webkit-transform: rotate(200deg) scaleY(-1);
+            transform: rotate(200deg) scaleY(-1);
+  }
+  90% {
+    -webkit-transform: rotate(200deg) scaleY(-1);
+            transform: rotate(200deg) scaleY(-1);
+  }
+  100% {
+    left: calc(140% - (8 * 5px));
+    -webkit-transform: rotate(-80deg) scaleY(1);
+            transform: rotate(-80deg) scaleY(1);
   }
 }
 @-webkit-keyframes navi {
   from {
     -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg);
+            transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+@keyframes navi {
+  from {
+    -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg);
+            transform: rotate(360deg) translateX(50px) rotate(-360deg);
   }
 }
