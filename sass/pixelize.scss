@@ -35,6 +35,9 @@ $icon-size-var : 5px;
         @if $item == e {
           $shadows:  $shadows + #d2cab5; // beige
         }
+        @if $item == f {
+          $shadows:  $shadows + forestgreen;
+        }
         @if $item == g {
           $shadows:  $shadows + green;
         }        
