@@ -129,14 +129,13 @@ body {
   /*
   * PERSONNAGES + ITEMS
   */
-
   
   &--link {
     /*
     * Le 23 CI-DESSOUS est le nombre de ligne de la matrice
     */
     left: calc(34% - (12 * 5px));
-    top: $foot - (23 * $icon-size-var);
+    top: $foot - (26 * $icon-size-var);
     &:after {
       box-shadow: pixelize($link);
     }
