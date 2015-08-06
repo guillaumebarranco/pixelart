@@ -205,6 +205,37 @@ body {
   }
 
 
+  &--goron {
+    /*
+    * Le 23 CI-DESSOUS est le nombre de ligne de la matrice
+    */
+    left: calc(74% - (8 * 5px));
+    //animation: goron 10s infinite ease-in-out;
+    top: $foot - (15 * $icon-size-var) + 200px;
+    transform: rotate(-90deg);
+    &:after {
+      box-shadow: pixelize($goron);
+    }
+  }
+
+  $width_zora : 4px;
+
+  &--zora {
+    /*
+    * Le 23 CI-DESSOUS est le nombre de ligne de la matrice
+    */
+    left: calc(15% - (11 * 5px));
+    //animation: goron 10s infinite ease-in-out;
+    top: $foot - (22 * $icon-size-var) + 240px;
+    transform: rotate(270deg) scaleY(-1);
+    &:after {
+      box-shadow: pixelize($zora, $width_zora);
+      top: -$width_zora !important;
+      left: -$width_zora !important;
+      width: $width_zora !important;
+      height: $width_zora !important;
+    }
+  }
 
 
   &--tingle {
@@ -224,6 +255,29 @@ body {
       width: $width_heart !important;
       height: $width_heart !important;
     }
+  }
+}
+
+@keyframes goron {
+  0% {
+    left: calc(120% - (8 * 5px));
+  }
+  
+  49% {
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(270deg) scaleY(-1);
+    left: calc(0% - 300px);
+  }
+  
+  99% {
+    transform: rotate(270deg) scaleY(-1);
+  }
+
+  100% {
+    transform: rotate(-90deg) scaleY(1);
+    left: calc(120% - (8 * 5px));
   }
 }
 
