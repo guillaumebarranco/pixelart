@@ -92,3 +92,57 @@ $heart:
   (t t b m m b t t)
   (t t t b b t t t)
 ;
+
+$green_rubis:
+  (t t t t t t t t)
+  (t t t b b t t t)
+  (t t b u u b t t)
+  (t b u u f f b t)
+  (b u u f f f b b)
+  (b u f f f f f b)
+  (b u u f f f u b)
+  (b u u f u f u b)
+  (b u f u f f u b)
+  (b u f f f f f b)
+  (b u u f f u f b)
+  (b f f f u f f b)
+  (t b f u f f b t)
+  (t t b f f b t t)
+  (t t t b b t t t)
+;
+
+$red_rubis:
+  (t t t t t t t t)
+  (t t t b b t t t)
+  (t t b v v b t t)
+  (t b v v r r b t)
+  (b v v r r r b b)
+  (b v r r r r r b)
+  (b v v r r r v b)
+  (b v v r v r v b)
+  (b v r v r r v b)
+  (b v r r r r r b)
+  (b v v r r v r b)
+  (b r r r v r r b)
+  (t b r v r r b t)
+  (t t b r r b t t)
+  (t t t b b t t t)
+;
+
+$blue_rubis:
+  (t t t t t t t t)
+  (t t t b b t t t)
+  (t t b a a b t t)
+  (t b a a n n b t)
+  (b a a n n n b b)
+  (b a n n n n n b)
+  (b a a n n n a b)
+  (b a a n a n a b)
+  (b a n a n n a b)
+  (b a n n n n n b)
+  (b a a n n a n b)
+  (b n n n a n n b)
+  (t b n a n n b t)
+  (t t b n n b t t)
+  (t t t b b t t t)
+;

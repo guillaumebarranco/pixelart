@@ -47,6 +47,10 @@ $icon-size-var : 5px;
         @if $item == m {
           $shadows:  $shadows + maroon;
         }
+        
+        @if $item == n {
+          $shadows:  $shadows + #330099;
+        }
         @if $item == o {
           $shadows:  $shadows + orange;
         }
@@ -61,6 +65,9 @@ $icon-size-var : 5px;
         }
         @if $item == t {
           $shadows:  $shadows + transparent;
+        }
+        @if $item == u {
+          $shadows:  $shadows + #31C831;
         }
         @if $item == v {
           $shadows:  $shadows + purple;

@@ -26,12 +26,12 @@ body {
   position: relative;
 }
 
-
 $foot : 540px;
 
 body {
   overflow-x: hidden;
 }
+
 
 // list we're styling
 .icons {
@@ -125,6 +125,47 @@ body {
       height: $width_triforce !important;
     }
   }
+  
+  $width_rubis : 3px;
+  &--green_rubis {
+    // On multiplie la moitié de la largeur de la ligne par la largeur d'un carré, on soustrait le tout à 50% de la largeur
+    left: calc(36% - (9 * 8px));
+    top: 180px;
+
+    &:after {
+      box-shadow: pixelize($green_rubis, $width_rubis);
+      top: -$width_rubis !important;
+      left: -$width_rubis !important;
+      width: $width_rubis !important;
+      height: $width_rubis !important;
+    }
+  }
+  &--blue_rubis {
+    // On multiplie la moitié de la largeur de la ligne par la largeur d'un carré, on soustrait le tout à 50% de la largeur
+    left: calc(44% - (9 * 8px));
+    top: 180px;
+
+    &:after {
+      box-shadow: pixelize($blue_rubis, $width_rubis);
+      top: -$width_rubis !important;
+      left: -$width_rubis !important;
+      width: $width_rubis !important;
+      height: $width_rubis !important;
+    }
+  }
+  &--red_rubis {
+    // On multiplie la moitié de la largeur de la ligne par la largeur d'un carré, on soustrait le tout à 50% de la largeur
+    left: calc(40% - (9 * 8px));
+    top: 180px;
+
+    &:after {
+      box-shadow: pixelize($red_rubis, $width_rubis);
+      top: -$width_rubis !important;
+      left: -$width_rubis !important;
+      width: $width_rubis !important;
+      height: $width_rubis !important;
+    }
+  }
 
   /*
   * PERSONNAGES + ITEMS
@@ -191,7 +232,6 @@ body {
   &--key {
     left: calc(50% - (19 * 2px));
     top: $foot - (60 * $icon-size-var);
-
     animation: key 5s infinite ease-in-out;
 
     &:after {
@@ -347,9 +387,8 @@ body {
     transform: rotate(-80deg) scaleY(1);
   }
 }
-
-
 @keyframes navi {
   from {  transform: rotate(0deg) translateX(50px) rotate(0deg); }
   to   {  transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }
+
