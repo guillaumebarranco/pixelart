@@ -224,7 +224,12 @@ body {
     //left: 600px;
     top: $foot - (27 * $icon-size-var);
     &:after {
+      animation: ganon 4s infinite ease-in-out;
       box-shadow: pixelize($ganon);
+      top: -$icon-size-var !important;
+      left: -$icon-size-var !important;
+      width: $icon-size-var !important;
+      height: $icon-size-var !important;
     }
   }
 
@@ -392,3 +397,28 @@ body {
   to   {  transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }
 
+$koko: 20px;
+
+@keyframes ganon  {
+  0% {
+    top: -$icon-size-var !important;
+    left: -$icon-size-var !important;
+    width: $icon-size-var !important;
+    height: $icon-size-var !important;
+  }
+
+  50% {
+    top: -$koko !important;
+    left: -$koko !important;
+    width: $koko !important;
+    height: $koko !important;
+  }
+
+  100% {
+    top: -$icon-size-var !important;
+    left: -$icon-size-var !important;
+    width: $icon-size-var !important;
+    height: $icon-size-var !important;
+  }
+  
+}
